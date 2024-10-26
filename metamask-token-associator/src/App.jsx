@@ -6,6 +6,7 @@ import tokenAssociateFcn from "./components/hedera/tokenAssociate.js";
 import "./styles/App.css";
 
 function App() {
+	//#region State Variables
 	const [walletData, setWalletData] = useState();
 	const [account, setAccount] = useState();
 	const [network, setNetwork] = useState();
@@ -17,7 +18,9 @@ function App() {
 
 	const [connectLinkSt, setConnectLinkSt] = useState("");
 	const [executeLinkSt, setExecuteLinkSt] = useState("");
+	//#endregion
 
+	//#region Functions
 	async function connectWallet() {
 		if (account !== undefined) {
 			setConnectTextSt(`🔌 Account ${account} already connected ⚡ ✅`);
@@ -35,6 +38,7 @@ function App() {
 			}
 		}
 	}
+
 
 	function handleInputChange(event) {
 		let textIn = event.target.value;
@@ -72,7 +76,7 @@ function App() {
 		}
 	}
 
-	//=====================
+	//#endregion
 
 	return (
 		<div className="App">

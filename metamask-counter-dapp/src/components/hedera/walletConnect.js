@@ -32,7 +32,7 @@ async function walletConnectFcn() {
 	});
 	console.log("- Switched ✅");
 
-	// // CONNECT TO ACCOUNT
+	// CONNECT TO ACCOUNT
 	console.log("- Connecting wallet...🟠");
 	let selectedAccount;
 	await provider
