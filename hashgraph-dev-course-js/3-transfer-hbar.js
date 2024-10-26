@@ -43,9 +43,9 @@ async function environmentSetup() {
 
     // Create a new account with 1,000 tinybar starting balance
     const newAccountTransactionResponse  = await new AccountCreateTransaction()
-    .setKey(newAccountPublicKey)
-    .setInitialBalance(Hbar.fromTinybars(1000))
-    .execute(client);
+        .setKey(newAccountPublicKey)
+        .setInitialBalance(Hbar.fromTinybars(1000))
+        .execute(client);
 
     // Get the new account ID
     const getReceipt = await newAccountTransactionResponse.getReceipt(client);
